@@ -3,6 +3,7 @@
 using namespace std;
 template<typename returnType> pair<int,returnType*> generateRandomArr(int maxLen, returnType maxValue);
 int main() {
+    using namespace std;
     int count_arr = 10;
     for (int i = 0; i < count_arr; i++)
     {
