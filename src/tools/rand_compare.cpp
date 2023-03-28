@@ -7,7 +7,7 @@ int main() {
     int count_arr = 10;
     for (int i = 0; i < count_arr; i++)
     {
-        pair a = generateRandomArr(20,100);
+        auto a = generateRandomArr(20,100);
         cout << "数组长度=" << a.first << "; ";
         for (int i = 0; i < a.first; i++)
         {
@@ -16,7 +16,7 @@ int main() {
         cout << endl;
     }
     
-    pair a = generateRandomArr(20,100.0);
+    auto a = generateRandomArr(20,100.0);
     
     return 0;
 }
