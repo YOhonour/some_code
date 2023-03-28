@@ -145,4 +145,5 @@ int main()
         }
     }
     cout << ans << ' ' << mon << endl;
+    unordered_map<int,int> a;
 }

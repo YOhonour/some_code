@@ -1,0 +1,88 @@
+[161] Petersen K B, Pedersen M S. The matrix cookbook, version 20121115[J]. Technical University of Denmark, 2012, 3274.
+[162] Arora S, Barak B. Computational complexity: a modern approach[M]. UK: Cambridge Univer sity Press, 2009.
+[163] Bourgeois F, Lassalle J C. Algorithm 415: Algorithm for the assignment problem (rectangular
+matrices)[J]. Communications of the ACM, 1971, 14(12): 805806.
+[164] Sipser M. Introduction to the theory of computation[J]. ACM Sigact News, 1996, 27(1): 2729.
+[165] Ross G T, Soland R M. A branch and bound algorithm for the generalized assignment problem[J].
+Mathematical programming, 1975, 8(1): 91103.
+[166] Vincent T, Seipp F, Ruzika S, et al. Multiple objective branch and bound for mixed 01 linear pro
+gramming: Corrections and improvements for the biobjective case[J]. Computers & Operations
+Research, 2013, 40(1): 498509.
+[167] Wolsey L A. Integer programming[M]. New York: John Wiley & Sons, 2020.
+[168] Hamdollahzadeh M, Amiri R, Behnia F. Optimal sensor placement for multisource AOA local
+isation with distancedependent noise model[J]. IET Radar, Sonar & Navigation, 2019, 13(6):
+881891.
+[169] Chen C Y, Vaidyanathan P P. MIMO radar space–time adaptive processing using prolate
+spheroidal wave functions[J]. IEEE Transactions on Signal Processing, 2008, 56(2): 623635.
+[170] Wu Q, Zhang Y D, Amin M G, et al. Space–time adaptive processing and motion parameter
+estimation in multistatic passive radar using sparse Bayesian learning[J]. IEEE Transactions on
+Geoscience and Remote Sensing, 2015, 54(2): 944957.
+[171] Rihaczek A W. Principles of highresolution radar, artech house radar library[J]. Artech House,
+Norwood, MA, USA, 1996.
+[172] Van Trees H L. Optimum array processing: Part IV of detection, estimation, and modulation
+theory[M]. New York: John Wiley & Sons, 2002.
+[173] Chen C Y, Vaidyanathan P P. MIMO radar waveform optimization with prior information of the
+extended target and clutter[J]. IEEE Transactions on Signal Processing, 2009, 57(9): 35333544.
+[174] Pillai S U, Youla D, Oh H, et al. Optimum transmitreceiver design in the presence of signal
+dependent interference and channel noise[C]. 1999 Asilomar Conference on Signals, Systems,
+and Computers, Pacific Grove, USA, 1999, 870875.
+[175] Capon J. Highresolution frequencywavenumber spectrum analysis[J]. Proceedings of the IEEE,
+1969, 57(8): 14081418.
+[176] Donoho D L. Compressed sensing[J]. IEEE Transactions on information theory, 2006, 52(4):
+12891306.
+[177] Figueiredo M A, Nowak R D, Wright S J. Gradient projection for sparse reconstruction: Appli
+cation to compressed sensing and other inverse problems[J]. IEEE Journal of selected topics in
+signal processing, 2007, 1(4): 586597.
+[178] Chen S S, Donoho D L, Saunders M A. Atomic decomposition by basis pursuit[J]. SIAM review,
+2001, 43(1): 129159.
+[179] Rogers C A, Popescu D C. Fluctuating extended target detection in clutter environment com
+pressed sensing MIMO radar[C]. 2017 IEEE Military Communications Conference, Baltimore,
+USA, 2017, 507512.
+[180] Raich R, Goldberg J, Messer H. Bearing estimation for a distributed source: Modeling, inherent
+accuracy limitations and algorithms[J]. IEEE Transactions on Signal Processing, 2000, 48(2):
+429441.
+[181] Gao X, Tufvesson F, Edfors O. Massive MIMO channels—Measurements and models[C]. 2013
+IEEE Asilomar conference on signals, systems and computers, Pacific Grove, USA, 2013, 280
+284.
+[182] Carvalho E D, Ali A, Amiri A, et al. Nonstationarities in extralargescale massive MIMO[J].
+IEEE Wireless Communications, 2020, 27(4): 7480.
+[183] Martínez Á O, Eggers P, De Carvalho E. Geometrybased stochastic channel models for 5G:
+Extending key features for massive MIMO[C]. 2016 IEEE International Symposium on Personal,
+Indoor, and Mobile Radio Communications, Valencia, Spain, 2016, 16.
+[184] Bell M R. Information theory and radar waveform design[J]. IEEE Transactions on Information
+Theory, 1993, 39(5): 15781597.
+[185] Lee Y U, Choi J, Song I, et al. Distributed source modeling and directionofarrival estimation
+techniques[J]. IEEE Transactions on Signal Processing, 1997, 45(4): 960969.
+[186] Fishler E, Haimovich A M, Blum R S, et al. Spatial diversity in radars—Models and detection
+performance[J]. IEEE Transactions on Signal Processing, 2006, 54(3): 823838.
+[187] He Q, Blum R S. Noncoherent versus coherent MIMO radar: Performance and simplicity anal
+ysis[J]. Signal Processing, 2012, 92(10): 24542463.
+[188] Cha S. Comprehensive survey on distance/similarity measures between probability density func
+tions[J]. International Journal of Mathematical Models and Methods in Applied Sciences, 2007,
+1(4): 300307.
+[189] Papoulis A, Pillai S U. Probability, random variables, and stochastic processes[M]. Boston:
+McGrawHill Education, 2002.
+[190] Cheng Y, Wang X, Caelli T, et al. On information resolution of radar systems[J]. IEEE Transac
+tions on Aerospace and Electronic Systems, 2012, 48(4): 30843102.
+[191] Basseville M. Distance measures for signal processing and pattern recognition[J]. Signal pro
+cessing, 1989, 18(4): 349369.
+[192] Helén M, Virtanen T. Query by example of audio signals using Euclidean distance between
+Gaussian mixture models[C]. 2007 IEEE International Conference on Acoustics, Speech and
+Signal Processing, Honolulu, USA, 2007, 225228.
+[193] Cai Y, Lim L. Distances between probability distributions of different dimensions[J]. IEEE
+Transactions on Information Theory, 2022, 68(6): 40204031.
+[194] Van Trees H L. Detection, estimation, and modulation theory, part I: detection, estimation, and
+linear modulation theory[M]. New York: John Wiley & Sons, 2004.
+[195] MacKay D J C. Introduction to Gaussian processes[J]. NATO ASI Series F Computer and Sys
+tems Sciences, 1998, 168: 133166.
+[196] Gradshteyn I S, Ryzhik I M. Table of integrals, series, and products[M]. Academic press, 2014.
+[197] Harris F E. Incomplete Bessel, generalized incomplete gamma, or leaky aquifer functions[J].
+Journal of Computational and Applied Mathematics, 2008, 215(1): 260269.
+[198] Goldman J. Detection in the presence of spherically symmetric random vectors[J]. IEEE Trans
+actions on Information Theory, 1976, 22(1): 5259.
+[199] Zheng L, Tse D N C. Diversity and multiplexing: A fundamental tradeoff in multipleantenna
+channels[J]. IEEE Transactions on information theory, 2003, 49(5): 10731096.
+[200] Richards M A, Scheer J, Holm W A, et al. Principles of modern radar: Basic principles[M].
+Raleigh, NC: Scitech Publishing, 2010.
+[201] Levin G, Loyka S. On the outage capacity distribution of correlated keyhole MIMO channels[J].
+IEEE Transactions on Information Theory, 2008, 54(7): 32323245.
