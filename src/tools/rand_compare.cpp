@@ -24,7 +24,7 @@ int main() {
 template<typename returnType> pair<int,returnType*> generateRandomArr(int maxLen, returnType maxValue){
     random_device seed;//硬件生成随机数种子
 	ranlux48 engine(seed());//利用种子生成随机数引擎
-    uniform_real_distribution<> distrib_len(1, maxLen);//设置随机数范围，并为均匀分布
+    uniform_int_distribution<> distrib_len(1, maxLen);//设置随机数范围，并为均匀分布 // 左闭右闭
     uniform_real_distribution<> distrib_value(0.0, maxValue);//设置随机数范围，并为均匀分布
     int len = distrib_len(engine);
     returnType* arr = new returnType[sizeof(returnType)*len];

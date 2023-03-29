@@ -246,7 +246,7 @@ void mid_nums3(vector<int>& nums,int target){
     }
     return;
 }
-// 双指针 小于区域在左边 等于区域在中间 大于区域在左边
+// 双指针 小于区域在左边 等于区域在中间 大于区域在右边
 void mid_nums4(vector<int>& nums,int target){
     int lower_p = -1,equal_p = -1;
 
