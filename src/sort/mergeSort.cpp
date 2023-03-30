@@ -5,10 +5,13 @@ using namespace std;
 
 void mergeSort(int nums[],int l,int r);//归并排序
 int mergeRucr(int nums[],int temp[],int l,int r);//归并排序的递归体
+
 int minplus(int nums[],int l, int r);//数组的小和问题
-int merge(int nums[],int l,int m,int r);
-int inversePair(int nums[],int l, int r);
-int pairmerge(int nums[],int l,int m,int r);
+int merge(int nums[],int l,int m,int r);//小和问题的合并
+//求逆序对
+int reversePairs(int nums[],int l, int r);//C语言风格
+int pairmerge(int nums[],int l,int m,int r);//逆序对的合并操作
+
 int* mid_nums(vector<int>& nums,int ti);
 void mid_nums2(vector<int>& nums,int targetIndex);
 void mid_nums3(vector<int>& nums,int targetIndex);
@@ -142,20 +145,20 @@ int merge(int nums[],int l,int m,int r){
 /*
 在数组中的两个数字，如果前面一个数字大于后面的数字，则这两个数字组成一个逆序对。输入一个数组，求出这个数组中的逆序对的总数。
 */
-int inversePair(int nums[],int l, int r){
+int reversePairs(int nums[],int l, int r){
     if (l == r) 
         return 0;
     int mid = l + ((r-l)>>1);//中点位置
-    int re = inversePair(nums,l,mid);
-    re +=  + inversePair(nums,mid+1,r);
+    int re = reversePairs(nums,l,mid);
+    re +=  + reversePairs(nums,mid+1,r);
     return re + pairmerge(nums,l,mid,r);
 }
+//使用归并排序的方式  C语言方式 
 int pairmerge(int nums[],int l,int m,int r){
-    vector<int> num2s;
     
     const int len = r-l+1;
     int swap_count = 0;
-    int *help = new int[len];
+    int *help = (int *)malloc(len * sizeof(int));//这里优化一下不要每次都申请
     int p = 0,pl=l,pr=m+1;
     while (pl <= m && pr <= r){
         //对每个加入help的数 计算右边比它大的个数
@@ -243,7 +246,7 @@ void mid_nums3(vector<int>& nums,int target){
     }
     return;
 }
-// 双指针 小于区域在左边 等于区域在中间 大于区域在左边
+// 双指针 小于区域在左边 等于区域在中间 大于区域在右边
 void mid_nums4(vector<int>& nums,int target){
     int lower_p = -1,equal_p = -1;
 
@@ -293,30 +296,7 @@ void mid_nums5(vector<int>& nums,int target){
     cout << "lower ptr: " << lower_p << "  bigger prt : " << bigger_p << endl;
     return;
 }
-int fastSort(vector<int>& nums,int l, int r){
-    if (l >= r || l < 0 || r >= nums.size()) return 0;
-    int target = nums[l + (r-l)/2];//取中间位置的元素作为分割点
-    int lower_p = l-1,bigger_p = r + 1;
-    int i = lower_p + 1;
-    while (i < bigger_p)
-    {
-        if (nums[i] < target)
-        {
-            //比目标小的交换到小于区边界的前一个（添加完成后
-            swap(nums,i,lower_p+1);
-            lower_p++;
-            i++;
-        }else if (nums[i] > target){
-            swap(nums,i,bigger_p-1);
-            bigger_p--;
-        }else{
-            i ++;
-        }
-    }
-    printArr(nums);
-    fastSort(nums,l,lower_p);//小于区域
-    fastSort(nums,bigger_p,r);//大于区域
-}
+
 void inline swap(vector<int>& nums, int a, int b){
     int t = nums[a];
     nums[a] = nums[b];

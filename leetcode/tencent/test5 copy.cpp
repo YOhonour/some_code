@@ -8,8 +8,8 @@ template<typename returnType> vector<returnType> generateRandomArr(int maxLen, r
 typedef unsigned long long uLL;
 typedef unsigned int uINT;
 /*
-ç»™å‡ºä¸€ä¸ªæ­£æ•´æ•°æ•°ç»„A,ç‰›ç‰›æƒ³çŸ¥é“å…¶ä¸­æœ‰å¤šå°‘å­æ•°ç»„æ»¡å®š;é‡Œé¢æ‰€æœ‰æ•°å­—çš„ä¹˜ç§¯ç­‰äºé‡Œé¢æ‰€æœ‰æ•°å­—çš„å¼‚æˆ–ã€‚
-ä¸€ä¸ªæ•°ç»„çš„å­æ•°ç»„æŒ‡æ•°ç»„ä¸­éç©ºçš„ä¸€æ®µè¿ç»­æ•°å­—ã€‚
+¸ø³öÒ»¸öÕıÕûÊıÊı×éA,Å£Å£ÏëÖªµÀÆäÖĞÓĞ¶àÉÙ×ÓÊı×éÂú¶¨;ÀïÃæËùÓĞÊı×ÖµÄ³Ë»ıµÈÓÚÀïÃæËùÓĞÊı×ÖµÄÒì»ò¡£
+Ò»¸öÊı×éµÄ×ÓÊı×éÖ¸Êı×éÖĞ·Ç¿ÕµÄÒ»¶ÎÁ¬ĞøÊı×Ö¡£
 */
 vector<pair<uLL,uLL>> result;
 bool valid(vector<uLL>& nums,uLL  startIndex,uLL endIndex){
@@ -55,12 +55,12 @@ int main() {
 }
 
 
-//éšæœºç”Ÿæˆé•¿åº¦éšæœºï¼Œå€¼éšæœºçš„æ•°ç»„ï¼Œå‚æ•°ä¸ºæœ€å¤§é•¿åº¦å’Œæœ€å¤§å€¼
+//Ëæ»úÉú³É³¤¶ÈËæ»ú£¬ÖµËæ»úµÄÊı×é£¬²ÎÊıÎª×î´ó³¤¶ÈºÍ×î´óÖµ
 template<typename returnType> vector<returnType> generateRandomArr(int maxLen, returnType maxValue){
-    random_device seed;//ç¡¬ä»¶ç”Ÿæˆéšæœºæ•°ç§å­
-	ranlux48 engine(seed());//åˆ©ç”¨ç§å­ç”Ÿæˆéšæœºæ•°å¼•æ“
-    uniform_int_distribution<int> distrib_len(1, maxLen);//è®¾ç½®éšæœºæ•°èŒƒå›´ï¼Œå¹¶ä¸ºå‡åŒ€åˆ†å¸ƒ ä¸ºé—­åŒºé—´
-    uniform_int_distribution<returnType> distrib_value(0, maxValue);//è®¾ç½®éšæœºæ•°èŒƒå›´ï¼Œå¹¶ä¸ºå‡åŒ€åˆ†å¸ƒ å·¦é—­å³å¼€
+    random_device seed;//Ó²¼şÉú³ÉËæ»úÊıÖÖ×Ó
+	ranlux48 engine(seed());//ÀûÓÃÖÖ×ÓÉú³ÉËæ»úÊıÒıÇæ
+    uniform_int_distribution<int> distrib_len(1, maxLen);//ÉèÖÃËæ»úÊı·¶Î§£¬²¢Îª¾ùÔÈ·Ö²¼ Îª±ÕÇø¼ä
+    uniform_int_distribution<returnType> distrib_value(0, maxValue);//ÉèÖÃËæ»úÊı·¶Î§£¬²¢Îª¾ùÔÈ·Ö²¼ ×ó±ÕÓÒ¿ª
     int len = distrib_len(engine);
     vector<returnType> arr;
     
