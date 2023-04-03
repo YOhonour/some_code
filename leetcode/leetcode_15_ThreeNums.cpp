@@ -36,7 +36,7 @@ vector<vector<int>> threeSum(vector<int> &nums)
             continue;}
         //此时的左边界j 初始位置应该在“最小值”下一个
         j = i + 1, k = nums.size() - 1;
-        while (j < k)
+        while (j < k)//将双指针逐渐逼近
         {
             int s = nums[i] + nums[j] + nums[k];
             if (s > 0)
@@ -58,8 +58,8 @@ int main()
 {
 
     // vector<int> nums = {2,0,-2,-5,-5,-3,2,-4};
-    // vector<int> nums = {-1,0,1,2,-1,-4};
-    vector<int> nums = {0,0,0,0};
+     vector<int> nums = {-1,0,1,2,-1,-4};
+    // vector<int> nums = {0,0,0,0};
     
     auto a = threeSum(nums);
     cout << a.size() << endl;
