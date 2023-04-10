@@ -5,24 +5,30 @@
 给你一个只包含 '(' 和 ')' 的字符串，找出最长有效（格式正确且连续）括号子串的长度。
 */
 using namespace std;
-int longestValidParentheses(string s){
-    if(s.length() < 2) return 0;
+int longestValidParentheses(string s) {
+    if (s.length() < 2) return 0;
     int dp_size = s.length();
-    int *dp = new int[dp_size]{0};
+    //vector<int> dp(dp_size, 0);//dp表示 第i个字符所能匹配的最大长度
+    int* dp = new int[dp_size] {0};
     int max = 0;
     for (int i = 1; i < dp_size; i++)
     {
-        if(s.at(i) == ')'){
-            if(s.at(i-1)=='(') {
-                dp[i] = (i - 2) < 0 ? 2 : dp[i-2] + 2;
-            } else if (i == dp[i-1] + 1 && s.at(i-dp[i-1]-1) == '('){
-                dp[i] = dp[i-1] + 2;
-                dp[i] = i - dp[i] < 0 ? dp[i] : dp[i] + dp[i-dp[i]];
-            }else{
+        if (s.at(i) == ')') {
+            if (s.at(i - 1) == '(') {
+                //第一种情况是 前一个字符是可以匹配上的
+                dp[i] = (i - 2) < 0 ? 2 : dp[i - 2] + 2;
+            }
+            else if ((i - dp[i - 1] - 1) >= 0 && s.at(i - dp[i - 1] - 1) == '(') {
+                //第二种情况是 可以与上一段有效字符串之前的那个匹配上，如果可以匹配上，更新的值应该考虑当前匹配字段再上一个的dp值
+                dp[i] = dp[i - 1] + 2;
+                dp[i] = i - dp[i] < 0 ? dp[i] : dp[i] + dp[i - dp[i]];
+            }
+            else {
                 dp[i] = 0;
             }
             max = max < dp[i] ? dp[i] : max;
-        }else{
+        }
+        else {
             dp[i] = 0;
         }
     }
