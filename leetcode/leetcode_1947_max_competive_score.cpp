@@ -63,7 +63,6 @@ int maxCompatibilitySum(vector<vector<int>> &students, vector<vector<int>> &ment
         vis[i] = false;
     }
 
-    myDfs(allscore, 0, 0, 0);
     return ans;
 }
 int myDfs(vector<vector<int>> &allscore, int row, int clum, int temp)
