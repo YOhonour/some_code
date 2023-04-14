@@ -29,9 +29,7 @@ int test5(vector<uLL>& nums, uLL len){
             if (valid(nums,i,j)) {
                 result.push_back({i,j});
             }
-            
         }
-        
     }
     return result.size();
 }
