@@ -28,28 +28,31 @@ struct TreeNode
 
 */
 using namespace std;
-bool flag = true;
-int curr(TreeNode *p)
+bool flag = false;
+int target = 0;
+void dfs(TreeNode *p, int num)
 {
+    if(flag == true) return;
+    if (p == nullptr)
+        return;
     if (p->left == nullptr && p->right == nullptr)
-        return 1;
-    
-    if (p->left != nullptr && p->right == nullptr)
     {
-        return curr(p->left) + 1;
+        if (target == num * p->val)
+        {
+            flag = true;
+        }
+        return;
     }
-    if (p->left == nullptr && p->right != nullptr)
-    {
-        return curr(p->right) + 1;
-    }
-    return min(curr(p->left), curr(p->right)) + 1;
+    dfs(p->left, num * p->val);
+    dfs(p->right, num * p->val);
+    return;
 }
 
-int minDepth(TreeNode *root)
+bool hasPathSum(TreeNode *root, int targetSum)
 {
-    if (root == nullptr)
-        return 0;
-    return curr(root);
+    target = targetSum;
+    dfs(root,1);
+    return flag;
 }
 int main()
 {
@@ -64,5 +67,6 @@ int main()
     n1.left = &n3;
     n1.right = &n4;
     n2.right = &n5;
+    hasPathSum(&n,30);
     return 0;
 }

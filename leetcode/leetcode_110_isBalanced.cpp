@@ -12,23 +12,29 @@ struct TreeNode
     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
 };
 /*
-给你两棵二叉树的根节点 p 和 q ，编写一个函数来检验这两棵树是否相同。
+给定一个二叉树，判断它是否是高度平衡的二叉树。
 
-如果两个树在结构上相同，并且节点具有相同的值，则认为它们是相同的
+本题中，一棵高度平衡二叉树定义为：
 */
 using namespace std;
-bool cur(TreeNode *p, TreeNode *q)
+bool flag = true;
+int curr(TreeNode *p)
 {
-    if (p == nullptr && q == nullptr) return true;
-    if (p != nullptr && q == nullptr) return false;
-    if (p == nullptr && q != nullptr) return false;
-    if (p->val == q->val) return cur(p->left,q->right) && cur(p->right,q->left);
-    return false;
+    if(p == nullptr) return 0;
+    int l = curr(p->left) + 1;
+    int r = curr(p->right) + 1;
+    if (!(l-r == 0 || l-r == 1 || l-r == -1)) {
+        flag = false;
+    }
+
+    return max(l,r);
+    //return l > r ? l : r;
 }
 
-bool isSymmetric(TreeNode *root)
+bool isBalanced(TreeNode *root)
 {
-    return cur(root->left,root->right);
+    curr(root);
+    return flag;
 }
 int main()
 {
@@ -38,9 +44,10 @@ int main()
     TreeNode n3(4);
     TreeNode n4(5);
     TreeNode n5(4);
-    n.left = &n1;n.right = &n2;
-    n1.left = &n3;n1.right = &n4;
+    n.left = &n1;
+    n.right = &n2;
+    n1.left = &n3;
+    n1.right = &n4;
     n2.right = &n5;
-    cout << isSymmetric(&n);
     return 0;
 }

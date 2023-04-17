@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include <queue>
 
 struct TreeNode
 {
@@ -12,23 +13,50 @@ struct TreeNode
     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
 };
 /*
-给你两棵二叉树的根节点 p 和 q ，编写一个函数来检验这两棵树是否相同。
-
-如果两个树在结构上相同，并且节点具有相同的值，则认为它们是相同的
+给你二叉树的根节点 root ，返回其节点值的 层序遍历 。 （即逐层地，从左到右访问所有节点）。
 */
 using namespace std;
-bool cur(TreeNode *p, TreeNode *q)
+//开辟临时队列遍历
+vector<vector<int>> levelOrder2(TreeNode *root)
 {
-    if (p == nullptr && q == nullptr) return true;
-    if (p != nullptr && q == nullptr) return false;
-    if (p == nullptr && q != nullptr) return false;
-    if (p->val == q->val) return cur(p->left,q->left) && cur(p->right,q->right);
-    return false;
+    queue<TreeNode *> que;
+    vector<vector<int>> res;
+    if (root == nullptr) return res;
+    que.push(root);
+    TreeNode *temp;
+    while (!que.empty())
+    {
+        vector<int> curL;
+        queue<TreeNode *> temp_que;
+        while (!que.empty())
+        {
+            temp = que.front();
+            que.pop();
+            curL.push_back(temp->val);
+            if (temp->left != nullptr) temp_que.push(temp->left);
+            if (temp->right != nullptr) temp_que.push(temp->right);
+        }
+        res.push_back(curL);
+        que = temp_que;
+    }
+    return res;
 }
-
-bool isSameTree(TreeNode *p, TreeNode *q)
+//深度优先遍历
+vector<vector<int>> res_arr;
+void curr(TreeNode *p,int level){
+    if (p == nullptr) return;
+    if (level == res_arr.size())
+    {
+        res_arr.push_back(vector<int>());
+    }
+    res_arr[level].push_back(p->val);
+    curr(p->left,level+1);
+    curr(p->right,level+1);
+}
+vector<vector<int>> levelOrder(TreeNode *root)
 {
-    return cur(p,q);
+    curr(root,0);
+    return res_arr;
 }
 int main()
 {
