@@ -1,0 +1,12 @@
+32
+具体合并方案：
+Add A1,1 and A2,2
+Add A1,1 and A2,2
+Add A2,2 and A3,4
+Add A1,2 and A3,5
+43
+具体合并方案：
+Add A1,1 and A2,2
+Add A1,2 and A3,3
+Add A1,3 and A4,4
+Add A3,3 and A4,2
