@@ -13,22 +13,21 @@ using namespace std;
 */
 int jump(vector<int> &nums)
 {
-    vector<int> dp(nums.size(), INT_MAX);
-    dp[nums.size() - 1] = 0;
-    int tar = nums.size() - 1;
     int res = 0;
-    for (int i = nums.size() - 2; i >= 0; i--)
+    int targetLocation = nums.size() - 1;
+    while (targetLocation != 0)
     {
-        for (int j = nums[i]; j >= 0; j--)
+        for (int i = 0; i < targetLocation; i++)
         {
-            if (i + j < nums.size() && dp[i + j] < INT_MAX && dp[i] < 1 + dp[i + j] ) // 从后往前 依次查看
+            if (i + nums[i] >= targetLocation)
             {
-                dp[i] = 1 + dp[i + j] ;
+                targetLocation = i;
+                res ++;
                 break;
             }
         }
     }
-    return dp[0];
+    return res;
 }
 
 int main()
