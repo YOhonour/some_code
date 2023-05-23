@@ -68,6 +68,14 @@
         "xlocmon": "cpp",
         "xloctime": "cpp",
         "queue": "cpp",
-        "deque": "cpp"
+        "deque": "cpp",
+        "array": "cpp",
+        "bitset": "cpp",
+        "list": "cpp",
+        "ranges": "cpp",
+        "regex": "cpp",
+        "span": "cpp",
+        "valarray": "cpp",
+        "xtree": "cpp"
     }
 }
