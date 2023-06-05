@@ -22,6 +22,7 @@ int divide(int dividend, int divisor)
     negitive ^= divisor < 0;
     long long a = dividend < 0 ? 0 - (long long)dividend : dividend;
     long long b = divisor < 0 ? 0 - (long long)divisor : divisor;
+    long long b_ = b;
     long long ans = 0;
     long long t = 1;
 
