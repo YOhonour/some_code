@@ -33,7 +33,7 @@ int curr(TreeNode *p)
 {
     if (p->left == nullptr && p->right == nullptr)
         return 1;
-    
+
     if (p->left != nullptr && p->right == nullptr)
     {
         return curr(p->left) + 1;
@@ -50,6 +50,20 @@ int minDepth(TreeNode *root)
     if (root == nullptr)
         return 0;
     return curr(root);
+}
+int minD(TreeNode *root)
+{
+    if (root == nullptr)
+        return 0;
+    if (root->left == nullptr && root->right == nullptr)
+        return 1;
+    int minDepth = INT_MAX;
+    if (root->left != nullptr)
+        minDepth = min(minDepth, minD(root->left));
+    if (root->right != nullptr)
+        minDepth = min(minDepth, minD(root->right));
+    
+    return minDepth + 1;
 }
 int main()
 {
